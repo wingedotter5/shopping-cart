@@ -1,5 +1,12 @@
+import NavBar from "../components/NavBar";
+
 const Products = () => {
-  return <h1>products page</h1>;
+  return (
+    <>
+      <NavBar />
+      <h1>products page</h1>
+    </>
+  );
 };
 
 export default Products;
