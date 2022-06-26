@@ -1,0 +1,38 @@
+.container {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  justify-content: space-between;
+}
+
+.container .productImage img {
+  max-width: 60%;
+}
+
+.container .productImage {
+  align-self: center;
+  text-align: center;
+}
+
+.cartButton {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  padding: 0.75em 1.5em;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price div:last-child {
+  font-size: 24px;
+}
