@@ -55,6 +55,7 @@
 
 .advancedButton > input {
   max-width: 40px;
+  text-align: center;
 }
 
 .advancedButton > button {
