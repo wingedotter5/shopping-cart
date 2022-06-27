@@ -5,7 +5,7 @@ import Products from "./pages/Products";
 
 const RouteSwitch = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <CartProvider>
         <Routes>
           <Route path="/" element={<Home />} />
