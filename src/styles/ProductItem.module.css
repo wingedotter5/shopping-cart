@@ -40,3 +40,24 @@
 .price div:last-child {
   font-size: 24px;
 }
+
+.advancedButton {
+  display: flex;
+  height: 30px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 2px solid #d9d9d9;
+}
+
+.advancedButton > * {
+  border: none;
+}
+
+.advancedButton > input {
+  max-width: 40px;
+}
+
+.advancedButton > button {
+  width: 30px;
+  cursor: pointer;
+}
