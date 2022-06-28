@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import NavBar from "../components/NavBar";
 import ProductItem from "../components/ProductItem";
 import classes from "../styles/Products.module.css";
+import Cart from "../components/Cart";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -21,6 +22,7 @@ const Products = () => {
           <ProductItem key={product.id} product={product} />
         ))}
       </div>
+      <Cart />
     </>
   );
 };
