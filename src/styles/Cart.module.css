@@ -44,6 +44,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .cartButton > span {
@@ -73,21 +74,35 @@
 
 .cartItem {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   padding: 5px 10px;
-  justify-content: space-between;
   gap: 20px;
+  max-width: 500px;
 }
 
 .cartItem > img {
-  display: block;
-  width: 60px;
-  height: 60px;
+  flex: 0 1 20%;
 }
 
-.info {
-  width: 200px;
+.cartItem > div:nth-child(2) {
+  flex: 1 1 60%;
+}
+
+.cartItem > div:nth-child(3) {
+  flex: 1 1 20%;
+  text-align: right;
+}
+
+.cartItem .imgContainer {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imgContainer > img {
+  max-width: 100%;
 }
 
 .info > h3 {

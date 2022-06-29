@@ -18,21 +18,29 @@ const Cart = () => {
       {showCart ? (
         <div className={classes.backdrop}>
           <div className={classes.cart}>
-            <ul>
-              {cartItems.map((cartItem) => (
-                <li key={cartItem.product.id}>
-                  <CartItem cartItem={cartItem} />
-                </li>
-              ))}
-            </ul>
-            {cartItems.length && (
-              <div className={classes.totalPrice}>
-                <h2>Total Price:</h2>
-                <div>{`$${totalPrice.toFixed(2)}`}</div>
-              </div>
+            {cartItems.length > 0 ? (
+              <>
+                <ul>
+                  {cartItems.map((cartItem) => (
+                    <li key={cartItem.product.id}>
+                      <CartItem cartItem={cartItem} />
+                    </li>
+                  ))}
+                </ul>
+                {cartItems.length > 0 && (
+                  <div className={classes.totalPrice}>
+                    <h2>Total Price:</h2>
+                    <div>{`$${totalPrice.toFixed(2)}`}</div>
+                  </div>
+                )}
+              </>
+            ) : (
+              <h2>Nothing in the cart</h2>
             )}
             <div className={classes.cartButtons}>
-              <button className={classes.checkoutButton}>Checkout</button>
+              {cartItems.length > 0 && (
+                <button className={classes.checkoutButton}>Checkout</button>
+              )}
               <button
                 onClick={() => setShowCart(false)}
                 className={classes.closeButton}
@@ -68,7 +76,9 @@ const CartItem = ({ cartItem }) => {
 
   return (
     <div className={classes.cartItem}>
-      <img src={image} alt={title} />
+      <div className={classes.imgContainer}>
+        <img src={image} alt={title} />
+      </div>
       <div className={classes.info}>
         <h3>{title}</h3>
         <div className={classes.advancedButton}>

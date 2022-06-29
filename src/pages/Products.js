@@ -16,7 +16,6 @@ const Products = () => {
   return (
     <>
       <NavBar />
-      <h1>products page</h1>
       <div className={classes.container}>
         {products.map((product) => (
           <ProductItem key={product.id} product={product} />
