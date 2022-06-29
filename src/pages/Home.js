@@ -1,10 +1,11 @@
 import NavBar from "../components/NavBar";
+import classes from "../styles/Home.module.css";
 
 const Home = () => {
   return (
     <>
       <NavBar />
-      <h1>home page</h1>
+      <div className={classes.background}></div>
     </>
   );
 };
