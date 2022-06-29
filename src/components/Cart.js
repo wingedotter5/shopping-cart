@@ -17,36 +17,38 @@ const Cart = () => {
     <>
       {showCart ? (
         <div className={classes.backdrop}>
-          <div className={classes.cart}>
-            {cartItems.length > 0 ? (
-              <>
-                <ul>
-                  {cartItems.map((cartItem) => (
-                    <li key={cartItem.product.id}>
-                      <CartItem cartItem={cartItem} />
-                    </li>
-                  ))}
-                </ul>
-                {cartItems.length > 0 && (
-                  <div className={classes.totalPrice}>
-                    <h2>Total Price:</h2>
-                    <div>{`$${totalPrice.toFixed(2)}`}</div>
-                  </div>
-                )}
-              </>
-            ) : (
-              <h2>Nothing in the cart</h2>
-            )}
-            <div className={classes.cartButtons}>
-              {cartItems.length > 0 && (
-                <button className={classes.checkoutButton}>Checkout</button>
+          <div className={classes.cartContainer}>
+            <div className={classes.cart}>
+              {cartItems.length > 0 ? (
+                <>
+                  <ul>
+                    {cartItems.map((cartItem) => (
+                      <li key={cartItem.product.id}>
+                        <CartItem cartItem={cartItem} />
+                      </li>
+                    ))}
+                  </ul>
+                  {cartItems.length > 0 && (
+                    <div className={classes.totalPrice}>
+                      <h2>Total Price:</h2>
+                      <div>{`$${totalPrice.toFixed(2)}`}</div>
+                    </div>
+                  )}
+                </>
+              ) : (
+                <h2>Nothing in the cart</h2>
               )}
-              <button
-                onClick={() => setShowCart(false)}
-                className={classes.closeButton}
-              >
-                Close
-              </button>
+              <div className={classes.cartButtons}>
+                {cartItems.length > 0 && (
+                  <button className={classes.checkoutButton}>Checkout</button>
+                )}
+                <button
+                  onClick={() => setShowCart(false)}
+                  className={classes.closeButton}
+                >
+                  Close
+                </button>
+              </div>
             </div>
           </div>
         </div>
